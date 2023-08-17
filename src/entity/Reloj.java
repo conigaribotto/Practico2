@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package entity;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 /**
  *
@@ -12,16 +16,16 @@ public class Reloj {
 
     protected String dia, hora, modelo;
     protected long numSerie;
+    private static final Locale xxx = new Locale ("es","AR");
 
-    public Reloj(String dia, String hora, String modelo, long numSerie) {
-        this.dia = dia;
-        this.hora = hora;
-        this.modelo = modelo;
-        this.numSerie = numSerie;
+    public Reloj() {
+        LocalDate obj= LocalDate.now();
+        dia=obj.getDayOfWeek().toString();
+        
     }
 
     public String getDia() {
-        return dia;
+        return DayOfWeek.valueOf(dia).getDisplayName(TextStyle.FULL, xxx );
     }
 
     public String getHora() {
@@ -31,6 +35,9 @@ public class Reloj {
     public void incrementarDia() {
         /*este metodo incrementa el dia por ejemplo, lunes a martes.
         Usando LocalDate*/
+        DayOfWeek dianom= DayOfWeek.valueOf(dia);
+        dianom=dianom.plus(1);
+        dia=dianom.toString();
     }
 
     public void incrementarHora() {
