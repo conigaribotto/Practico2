@@ -1,6 +1,9 @@
 
 package testMain;
 
+import entity.Persona;
+import entity.RelojFit;
+
 public class Main {
 
     public static void main(String[] args) {
