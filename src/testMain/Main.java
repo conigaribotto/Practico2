@@ -13,11 +13,12 @@ public class Main {
         RelojFit relojFit = new RelojFit("Jueves", "19:10hs", "Slim", 1234567, 3,3);
         
         Persona persona = new Persona("Paola", "Argento", 18, 1.65, relojFit);
+        
         // Llamar a los métodos de la clase RelojFit a través del objeto Persona
-       System.out.println("Coordenadas del reloj Fit: x="+((RelojFit)persona.getReloj()).getX() +", y="+((RelojFit)persona.getReloj()).getY());
+        System.out.println("Coordenadas del reloj Fit: x=" + relojFit.getX() + ", y=" + relojFit.getY());
 
-       System.out.println("Día del reloj: " + persona.getReloj().getDia());
-        System.out.println("Hora del reloj: " + persona.getReloj().getHora());
+        System.out.println("Día del reloj: " + relojFit.getDia());
+        System.out.println("Hora del reloj: " + relojFit.getHora());
     }
 
 }
