@@ -1,6 +1,9 @@
 
 package testMain;
 
+import entity.Persona;
+import entity.RelojFit;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,6 +14,11 @@ public class Main {
         
         Persona persona = new Persona("Paola", "Argento", 18, 1.65, relojFit);
         
+        // Llamar a los métodos de la clase RelojFit a través del objeto Persona
+        System.out.println("Coordenadas del reloj Fit: x=" + ((RelojFit)persona.getReloj()).getX() + ", y=" + ((RelojFit)persona.getReloj()).getY());
+
+        System.out.println("Día del reloj: " + persona.getReloj().getDia());
+        System.out.println("Hora del reloj: " + persona.getReloj().getHora());
     }
 
 }

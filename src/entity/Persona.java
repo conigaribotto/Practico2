@@ -15,6 +15,14 @@ public class Persona {
     private double altura;
     private Reloj reloj;
 
+    public Reloj getReloj() {
+        return reloj;
+    }
+
+    public void setReloj(Reloj reloj) {
+        this.reloj = reloj;
+    }
+
     public Persona(String nombre, String apellido, int edad, double altura, Reloj reloj) {
         this.nombre = nombre;
         this.apellido = apellido;
