@@ -40,7 +40,15 @@ public class RelojFit extends Reloj {
         hasta la coordenada (x,y) que llega por parametro.*/
         return pasos;
     }
+      public double cuentaPasos(int x1, int y1, int x2, int y2) {
+        double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        return distancia;
+    }
 
+    public int frecuenciaCardiaca() {
+        int frecuencia = (int) (Math.random() * 41) + 60; // Frecuencia cardíaca entre 60 y 100
+        return frecuencia;
+    }
     @Override
     public String toString() {
         return "RelojFit{" + super.toString() + "Coordenadas: x=" + x + ", y=" + y + '}';
