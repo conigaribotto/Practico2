@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practico2;
+package testMain;
 
 /**
  *
  * @author Usuario
  */
-public class Practico2 {
+public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //4_ Desde la java main class, llamar a los metodos de unReloj, accediendo desde objeto unaPersona
+        // Llamar los metodos de todas las clasess
     }
-    
+
 }
